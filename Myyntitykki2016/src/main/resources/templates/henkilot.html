@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="fi">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Myyntitykki</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+
+    <body class="container">
+        <h3>Henkilöt</h3>
+        <p th:each="henkilo: ${henkilot}">
+            <span th:text="${henkilo.nimi}"></span>
+        </p>
+
+        <p><a th:href="@{/}">Takaisin</a></p>
+    </body>
+</html>

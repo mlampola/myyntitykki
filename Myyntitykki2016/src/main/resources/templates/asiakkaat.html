@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="fi">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Myyntitykki</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+
+    <body class="container">
+        <h3>Lisää uusi asiakas</h3>
+
+        <form method="POST" th:action="@{/asiakkaat}">
+            <table>
+                <tr>
+                    <td><label>Nimi</label></td>
+                    <td><input type="text" name="nimi" /></td>
+                </tr>
+
+                <tr>
+                    <td><label>Katuosoite</label></td>
+                    <td><input type="text" name="katuosoite" /></td>
+                </tr>
+
+                <tr>
+                    <td><label>Huoneisto</label></td>
+                    <td><input type="text" name="huoneisto" /></td>
+                </tr>
+
+                <tr>
+                    <td><label>Kaupunki</label></td>
+                    <td><input type="text" name="kaupunki" /></td>
+                </tr>
+
+                <tr>
+                    <td><label>Myyntiarvio</label></td>
+                    <td><input type="text" name="myyntiarvio" /></td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Lisää" />
+        </form>
+        
+        <h3>Asiakkaat</h3>
+        <p th:each="asiakas: ${asiakkaat}">
+            <span th:text="${asiakas.nimi}"></span>
+        </p>
+        <p><a th:href="@{/}">Takaisin</a></p>
+    </body>
+</html>
