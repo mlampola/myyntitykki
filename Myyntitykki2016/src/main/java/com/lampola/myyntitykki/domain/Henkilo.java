@@ -35,6 +35,9 @@ public class Henkilo extends AbstractPersistable<Long>{
     // Paikkatiedot
     private Double longitudi;
     private Double latitudi;
+
+    public Henkilo() {
+    }
     
     public String getNimi() {
         return nimi;
