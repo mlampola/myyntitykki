@@ -3,4 +3,4 @@ sudo: false
 script: mvn -f Myyntitykki2016/pom.xml clean verify
 
 jdk: 
-openjdk8
+oraclejdk8
