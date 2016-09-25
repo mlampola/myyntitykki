@@ -1,13 +1,8 @@
 language: java
 
-jdk: 
-oraclejdk8
+jdk:
+  - oraclejdk8
 
 sudo: false
-
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
 
 script: mvn -f Myyntitykki2016/pom.xml clean verify
