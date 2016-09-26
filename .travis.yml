@@ -7,8 +7,8 @@ sudo: false
 
 script: mvn -f Myyntitykki2016/pom.xml clean verify
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: "2300f4fa-908f-452a-a030-2eb7bef4ab87"
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: "2300f4fa-908f-452a-a030-2eb7bef4ab87"
     
