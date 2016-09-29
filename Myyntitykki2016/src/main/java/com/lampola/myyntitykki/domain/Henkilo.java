@@ -28,6 +28,7 @@ public class Henkilo extends AbstractPersistable<Long>{
     private String katuosoite; // Esim. Helsinginkatu 20 (ilman rappua/huoneistoa)
     private String huoneisto; // Esim. A 1
     private String kaupunki;
+    private String maa;
     
     @OneToMany(mappedBy="myyja")
     private List<Tehtava> tehtavat;
@@ -37,6 +38,7 @@ public class Henkilo extends AbstractPersistable<Long>{
     private Double latitudi;
 
     public Henkilo() {
+        this.setMaa("Finland");
     }
     
     public String getNimi() {
@@ -109,5 +111,13 @@ public class Henkilo extends AbstractPersistable<Long>{
 
     public void setTehtavat(List<Tehtava> tehtavat) {
         this.tehtavat = tehtavat;
+    }
+
+    public String getMaa() {
+        return maa;
+    }
+
+    public void setMaa(String maa) {
+        this.maa = maa;
     }
 }

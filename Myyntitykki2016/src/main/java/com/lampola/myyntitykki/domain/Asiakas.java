@@ -23,6 +23,7 @@ public class Asiakas extends AbstractPersistable<Long>{
     private String katuosoite; // Esim. Helsinginkatu 20 (ilman rappua/huoneistoa)
     private String huoneisto; // Esim. A 1
     private String kaupunki;
+    private String maa;
 
     private Integer myyntiarvio; // Arvioitu myyntimäärä (kpl)
     
@@ -32,6 +33,10 @@ public class Asiakas extends AbstractPersistable<Long>{
     
     @OneToMany(mappedBy="asiakas")
     private List<Tehtava> asiakkaat;
+
+    public Asiakas() {
+        this.setMaa("Finland");
+    }
 
     public String getNimi() {
         return nimi;
@@ -95,5 +100,13 @@ public class Asiakas extends AbstractPersistable<Long>{
 
     public void setAsiakkaat(List<Tehtava> asiakkaat) {
         this.asiakkaat = asiakkaat;
+    }
+
+    public String getMaa() {
+        return maa;
+    }
+
+    public void setMaa(String maa) {
+        this.maa = maa;
     }
 }

@@ -6,6 +6,8 @@
 package com.lampola.myyntitykki.controller;
 
 import com.lampola.myyntitykki.repository.HenkiloRepository;
+import com.lampola.myyntitykki.service.GeoRestClient;
+import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,14 @@ public class DefaultController {
     @Autowired
     private HenkiloRepository henkiloRepository;
 
+    @Autowired
+    private GeoRestClient geoRepository;
+
+    @PostConstruct
+    private void init() {
+        this.geoRepository.setUri("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCxiikL3ZQ9Jums1CvyjTbc6j0I0nJVdoA&address=");
+    }
+    
     @RequestMapping(value="*", method = RequestMethod.GET)
     public String home(Model model) {
         return "index";
