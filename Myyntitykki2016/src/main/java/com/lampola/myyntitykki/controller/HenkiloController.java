@@ -33,7 +33,7 @@ public class HenkiloController {
     @RequestMapping(method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("henkilot", henkiloRepository.findAll());
-        return "henkilot";
+        return "signup";
     }
     
     @RequestMapping(method = RequestMethod.POST)
