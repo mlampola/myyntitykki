@@ -1,1 +1,1 @@
-web: java -jar target/Myyntitykki-1.0-SNAPSHOT.jar
+web: java $JAVA_OPTS -Dspring.profiles.active=production -Dserver.port=$PORT -jar target/*.jar

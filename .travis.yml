@@ -5,7 +5,7 @@ jdk:
 
 sudo: false
 
-script: mvn -f Myyntitykki2016/pom.xml clean verify
+script: mvn clean verify
 
 #deploy:
 #  provider: heroku
