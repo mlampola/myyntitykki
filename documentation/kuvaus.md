@@ -2,8 +2,8 @@ Sovellus on tarkoitettu myyntiedustajien toiminnan organisoimiseen. Järjestelm�
 
 Jatkossa koordinaattien avulla on tarkoitus lajitella tehtävät myyjäehdokkaille asiakkaiden etäisyyden mukaiseen järjestykseen. Mahdollisesti tehtävään voi toteuttaa myös graafisen käyttöliittymän.
 
-Toteuttamatta on syötteiden validointi, erilliset tuotanto- ja testausprofiilit sekä tunnistautuminen ja roolit.
+Toteuttamatta on syötteiden validointi, tunnistautuminen ja roolit.
 
-Sovellus on testattavissa Travis-palvelussa, mutta sen siirto Herokuun ei ole onnistunut.
+Sovelluksen muutokset testataan automaattisesti Travis-palvelussa ja onnistuneiden testien jälkeen sovellus päivitetään Herokuun.
 
 
